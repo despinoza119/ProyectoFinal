@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for p in basket %}
+        <li>{{p}}</li>
+    <BUTTON>
+        <a href="{% url 'EliminarBasket' p.nombre_equipo %}">Eliminar</a>
+        <a href="{% url 'EditarBasket' p.nombre_equipo %}">Editar</a>
+    </BUTTON>
+    {% endfor %}
+    <br>
+    <br>
+    <a href="/basketFormulario/">AGREGAR EQUIPO</a>
+    <br>
+    <br>
+    <a href="/inicioBasket/">REGRESAR</a>
+</body>
+</html>
